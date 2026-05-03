@@ -33,7 +33,7 @@ export default function CTABand({ heading, subtext }: CTABandProps) {
       <div style={{ maxWidth: "640px", margin: "0 auto" }}>
         <h2
           style={{
-            fontFamily: "var(--font-syne), sans-serif",
+            fontFamily: "var(--font-space-grotesk), sans-serif",
             fontWeight: 800,
             fontSize: "clamp(1.75rem, 4vw, 2.5rem)",
             color: "#fff",
@@ -47,7 +47,7 @@ export default function CTABand({ heading, subtext }: CTABandProps) {
 
         <p
           style={{
-            fontFamily: "var(--font-dm-sans), sans-serif",
+            fontFamily: "var(--font-inter), sans-serif",
             color: "rgba(255,255,255,0.85)",
             fontSize: "1.05rem",
             lineHeight: 1.65,
@@ -82,7 +82,7 @@ export default function CTABand({ heading, subtext }: CTABandProps) {
                 flex: 1,
                 border: "none",
                 outline: "none",
-                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontFamily: "var(--font-inter), sans-serif",
                 fontSize: "0.95rem",
                 color: "#0D0D0D",
                 background: "transparent",
@@ -97,7 +97,7 @@ export default function CTABand({ heading, subtext }: CTABandProps) {
                 border: "none",
                 borderRadius: "100px",
                 padding: "12px 22px",
-                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontFamily: "var(--font-inter), sans-serif",
                 fontWeight: 500,
                 fontSize: "0.9rem",
                 cursor: "pointer",

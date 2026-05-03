@@ -7,8 +7,8 @@
   --color-light-grey: #f5f5f3;
   --color-muted: #888888;
 
-  --font-display: var(--font-syne);
-  --font-body: var(--font-dm-sans);
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
 }
 
 html {
@@ -16,13 +16,13 @@ html {
 }
 
 body {
-  font-family: var(--font-dm-sans), sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
   color: #0D0D0D;
   background: #ffffff;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-syne), sans-serif;
+  font-family: var(--font-space-grotesk), system-ui, sans-serif;
 }
 
 @keyframes fadeInUp {

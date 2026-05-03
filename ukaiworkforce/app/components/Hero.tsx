@@ -63,7 +63,7 @@ export default function Hero() {
           padding: "8px 20px",
           marginBottom: "28px",
           color: "#E85D26",
-          fontFamily: "var(--font-dm-sans), sans-serif",
+          fontFamily: "var(--font-inter), sans-serif",
           fontWeight: 500,
           fontSize: "0.875rem",
           letterSpacing: "0.02em",
@@ -77,7 +77,7 @@ export default function Hero() {
       <h1
         ref={setRef(1)}
         style={{
-          fontFamily: "var(--font-syne), sans-serif",
+          fontFamily: "var(--font-space-grotesk), sans-serif",
           fontWeight: 800,
           fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
           lineHeight: 1.1,
@@ -96,7 +96,7 @@ export default function Hero() {
       <p
         ref={setRef(2)}
         style={{
-          fontFamily: "var(--font-dm-sans), sans-serif",
+          fontFamily: "var(--font-inter), sans-serif",
           fontWeight: 400,
           fontSize: "clamp(1rem, 2.5vw, 1.2rem)",
           color: "rgba(255,255,255,0.7)",
@@ -119,7 +119,7 @@ export default function Hero() {
           border: "none",
           borderRadius: "100px",
           padding: "16px 36px",
-          fontFamily: "var(--font-dm-sans), sans-serif",
+          fontFamily: "var(--font-inter), sans-serif",
           fontWeight: 500,
           fontSize: "1.05rem",
           cursor: "pointer",
@@ -166,7 +166,7 @@ export default function Hero() {
             <div key={stat.value} style={{ textAlign: "center" }}>
               <div
                 style={{
-                  fontFamily: "var(--font-syne), sans-serif",
+                  fontFamily: "var(--font-space-grotesk), sans-serif",
                   fontWeight: 800,
                   fontSize: "clamp(1.75rem, 4vw, 2.5rem)",
                   color: "#E85D26",
@@ -178,7 +178,7 @@ export default function Hero() {
               </div>
               <div
                 style={{
-                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontFamily: "var(--font-inter), sans-serif",
                   color: "rgba(255,255,255,0.55)",
                   fontSize: "0.85rem",
                   lineHeight: 1.4,

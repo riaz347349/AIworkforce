@@ -82,7 +82,7 @@ export default function ProblemCapture() {
             color: "#E85D26",
             borderRadius: "100px",
             padding: "6px 16px",
-            fontFamily: "var(--font-dm-sans), sans-serif",
+            fontFamily: "var(--font-inter), sans-serif",
             fontWeight: 500,
             fontSize: "0.8rem",
             letterSpacing: "0.08em",
@@ -95,7 +95,7 @@ export default function ProblemCapture() {
 
         <h2
           style={{
-            fontFamily: "var(--font-syne), sans-serif",
+            fontFamily: "var(--font-space-grotesk), sans-serif",
             fontWeight: 800,
             fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
             color: "#0D0D0D",
@@ -109,7 +109,7 @@ export default function ProblemCapture() {
 
         <p
           style={{
-            fontFamily: "var(--font-dm-sans), sans-serif",
+            fontFamily: "var(--font-inter), sans-serif",
             color: "#888",
             fontSize: "1.05rem",
             lineHeight: 1.65,
@@ -132,7 +132,7 @@ export default function ProblemCapture() {
             <div style={{ fontSize: "3rem", marginBottom: "16px" }}>✅</div>
             <h3
               style={{
-                fontFamily: "var(--font-syne), sans-serif",
+                fontFamily: "var(--font-space-grotesk), sans-serif",
                 fontWeight: 700,
                 fontSize: "1.5rem",
                 color: "#0D0D0D",
@@ -143,7 +143,7 @@ export default function ProblemCapture() {
             </h3>
             <p
               style={{
-                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontFamily: "var(--font-inter), sans-serif",
                 color: "#888",
                 fontSize: "1rem",
                 lineHeight: 1.65,
@@ -184,7 +184,7 @@ export default function ProblemCapture() {
                     flex: 1,
                     border: "none",
                     outline: "none",
-                    fontFamily: "var(--font-dm-sans), sans-serif",
+                    fontFamily: "var(--font-inter), sans-serif",
                     fontSize: "0.95rem",
                     color: "#0D0D0D",
                     background: "transparent",
@@ -199,7 +199,7 @@ export default function ProblemCapture() {
                     border: "none",
                     borderRadius: "100px",
                     padding: "12px 24px",
-                    fontFamily: "var(--font-dm-sans), sans-serif",
+                    fontFamily: "var(--font-inter), sans-serif",
                     fontWeight: 500,
                     fontSize: "0.9rem",
                     cursor: "pointer",
@@ -235,7 +235,7 @@ export default function ProblemCapture() {
                     border: "1.5px solid #e0e0e0",
                     borderRadius: "100px",
                     padding: "8px 16px",
-                    fontFamily: "var(--font-dm-sans), sans-serif",
+                    fontFamily: "var(--font-inter), sans-serif",
                     fontSize: "0.85rem",
                     color: "#555",
                     cursor: "pointer",
@@ -275,7 +275,7 @@ export default function ProblemCapture() {
                 >
                   <p
                     style={{
-                      fontFamily: "var(--font-dm-sans), sans-serif",
+                      fontFamily: "var(--font-inter), sans-serif",
                       fontWeight: 500,
                       fontSize: "0.85rem",
                       color: "#E85D26",
@@ -288,7 +288,7 @@ export default function ProblemCapture() {
                   </p>
                   <h3
                     style={{
-                      fontFamily: "var(--font-syne), sans-serif",
+                      fontFamily: "var(--font-space-grotesk), sans-serif",
                       fontWeight: 700,
                       fontSize: "1.25rem",
                       color: "#0D0D0D",
@@ -309,7 +309,7 @@ export default function ProblemCapture() {
                           <label
                             style={{
                               display: "block",
-                              fontFamily: "var(--font-dm-sans), sans-serif",
+                              fontFamily: "var(--font-inter), sans-serif",
                               fontWeight: 500,
                               fontSize: "0.875rem",
                               color: "#0D0D0D",
@@ -329,7 +329,7 @@ export default function ProblemCapture() {
                               border: "1.5px solid #e0e0e0",
                               borderRadius: "12px",
                               padding: "12px 16px",
-                              fontFamily: "var(--font-dm-sans), sans-serif",
+                              fontFamily: "var(--font-inter), sans-serif",
                               fontSize: "0.95rem",
                               color: "#0D0D0D",
                               background: "#fff",
@@ -355,7 +355,7 @@ export default function ProblemCapture() {
                         border: "none",
                         borderRadius: "100px",
                         padding: "15px 24px",
-                        fontFamily: "var(--font-dm-sans), sans-serif",
+                        fontFamily: "var(--font-inter), sans-serif",
                         fontWeight: 500,
                         fontSize: "1rem",
                         cursor: sending ? "wait" : "pointer",

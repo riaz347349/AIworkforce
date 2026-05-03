@@ -22,21 +22,21 @@ export default function Footer() {
         <a
           href="/"
           style={{
-            fontFamily: "var(--font-syne), sans-serif",
+            fontFamily: "var(--font-space-grotesk), sans-serif",
             fontWeight: 800,
             fontSize: "1.25rem",
             textDecoration: "none",
             letterSpacing: "-0.5px",
           }}
         >
-          <span style={{ color: "#ffffff" }}>UKAI</span>
-          <span style={{ color: "#E85D26" }}>Workforce</span>
+          <span style={{ color: "#E85D26" }}>UKAI</span>
+          <span style={{ color: "#ffffff" }}>Workforce</span>
         </a>
 
         {/* Copyright */}
         <p
           style={{
-            fontFamily: "var(--font-dm-sans), sans-serif",
+            fontFamily: "var(--font-inter), sans-serif",
             color: "rgba(255,255,255,0.4)",
             fontSize: "0.875rem",
             margin: 0,

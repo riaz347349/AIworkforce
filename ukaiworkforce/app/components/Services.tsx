@@ -110,7 +110,7 @@ export default function Services() {
               </div>
               <h3
                 style={{
-                  fontFamily: "var(--font-syne), sans-serif",
+                  fontFamily: "var(--font-space-grotesk), sans-serif",
                   fontWeight: 700,
                   fontSize: "1.2rem",
                   color: "#0D0D0D",
@@ -121,7 +121,7 @@ export default function Services() {
               </h3>
               <p
                 style={{
-                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontFamily: "var(--font-inter), sans-serif",
                   color: "#666",
                   fontSize: "0.95rem",
                   lineHeight: 1.7,
@@ -150,7 +150,7 @@ const tagStyle: React.CSSProperties = {
   color: "#E85D26",
   borderRadius: "100px",
   padding: "6px 16px",
-  fontFamily: "var(--font-dm-sans), sans-serif",
+  fontFamily: "var(--font-inter), sans-serif",
   fontWeight: 500,
   fontSize: "0.8rem",
   letterSpacing: "0.08em",
@@ -159,7 +159,7 @@ const tagStyle: React.CSSProperties = {
 };
 
 const h2Style: React.CSSProperties = {
-  fontFamily: "var(--font-syne), sans-serif",
+  fontFamily: "var(--font-space-grotesk), sans-serif",
   fontWeight: 800,
   fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
   color: "#0D0D0D",

@@ -75,7 +75,7 @@ export default function Outcomes() {
             color: "#E85D26",
             borderRadius: "100px",
             padding: "6px 16px",
-            fontFamily: "var(--font-dm-sans), sans-serif",
+            fontFamily: "var(--font-inter), sans-serif",
             fontWeight: 500,
             fontSize: "0.8rem",
             letterSpacing: "0.08em",
@@ -88,7 +88,7 @@ export default function Outcomes() {
 
         <h2
           style={{
-            fontFamily: "var(--font-syne), sans-serif",
+            fontFamily: "var(--font-space-grotesk), sans-serif",
             fontWeight: 800,
             fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
             color: "#0D0D0D",
@@ -135,7 +135,7 @@ export default function Outcomes() {
               </div>
               <h3
                 style={{
-                  fontFamily: "var(--font-syne), sans-serif",
+                  fontFamily: "var(--font-space-grotesk), sans-serif",
                   fontWeight: 700,
                   fontSize: "1.3rem",
                   color: o.textColor,
@@ -146,7 +146,7 @@ export default function Outcomes() {
               </h3>
               <p
                 style={{
-                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontFamily: "var(--font-inter), sans-serif",
                   color: o.mutedColor,
                   fontSize: "0.95rem",
                   lineHeight: 1.65,

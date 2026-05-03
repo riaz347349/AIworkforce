@@ -109,7 +109,7 @@ export default function HowItWorks() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontFamily: "var(--font-syne), sans-serif",
+                  fontFamily: "var(--font-space-grotesk), sans-serif",
                   fontWeight: 800,
                   fontSize: "1.3rem",
                   position: "relative",
@@ -142,7 +142,7 @@ export default function HowItWorks() {
 
               <h3
                 style={{
-                  fontFamily: "var(--font-syne), sans-serif",
+                  fontFamily: "var(--font-space-grotesk), sans-serif",
                   fontWeight: 700,
                   fontSize: "1.15rem",
                   color: "#0D0D0D",
@@ -155,7 +155,7 @@ export default function HowItWorks() {
 
               <p
                 style={{
-                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontFamily: "var(--font-inter), sans-serif",
                   color: "#666",
                   fontSize: "0.95rem",
                   lineHeight: 1.7,
@@ -172,7 +172,7 @@ export default function HowItWorks() {
                   color: "#E85D26",
                   borderRadius: "100px",
                   padding: "5px 14px",
-                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontFamily: "var(--font-inter), sans-serif",
                   fontWeight: 500,
                   fontSize: "0.8rem",
                 }}
@@ -202,7 +202,7 @@ const tagStyle: React.CSSProperties = {
   color: "#E85D26",
   borderRadius: "100px",
   padding: "6px 16px",
-  fontFamily: "var(--font-dm-sans), sans-serif",
+  fontFamily: "var(--font-inter), sans-serif",
   fontWeight: 500,
   fontSize: "0.8rem",
   letterSpacing: "0.08em",
@@ -211,7 +211,7 @@ const tagStyle: React.CSSProperties = {
 };
 
 const h2Style: React.CSSProperties = {
-  fontFamily: "var(--font-syne), sans-serif",
+  fontFamily: "var(--font-space-grotesk), sans-serif",
   fontWeight: 800,
   fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
   color: "#0D0D0D",
@@ -220,7 +220,7 @@ const h2Style: React.CSSProperties = {
 };
 
 const mutedPStyle: React.CSSProperties = {
-  fontFamily: "var(--font-dm-sans), sans-serif",
+  fontFamily: "var(--font-inter), sans-serif",
   color: "#888",
   fontSize: "1.05rem",
   lineHeight: 1.65,

@@ -92,7 +92,7 @@ export default function Pricing() {
             color: "#E85D26",
             borderRadius: "100px",
             padding: "6px 16px",
-            fontFamily: "var(--font-dm-sans), sans-serif",
+            fontFamily: "var(--font-inter), sans-serif",
             fontWeight: 500,
             fontSize: "0.8rem",
             letterSpacing: "0.08em",
@@ -105,7 +105,7 @@ export default function Pricing() {
 
         <h2
           style={{
-            fontFamily: "var(--font-syne), sans-serif",
+            fontFamily: "var(--font-space-grotesk), sans-serif",
             fontWeight: 800,
             fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
             color: "#0D0D0D",
@@ -118,7 +118,7 @@ export default function Pricing() {
 
         <p
           style={{
-            fontFamily: "var(--font-dm-sans), sans-serif",
+            fontFamily: "var(--font-inter), sans-serif",
             color: "#888",
             fontSize: "1.05rem",
             lineHeight: 1.65,
@@ -161,7 +161,7 @@ export default function Pricing() {
                 color: "#E85D26",
                 borderRadius: "100px",
                 padding: "5px 14px",
-                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontFamily: "var(--font-inter), sans-serif",
                 fontWeight: 500,
                 fontSize: "0.8rem",
                 marginBottom: "20px",
@@ -172,7 +172,7 @@ export default function Pricing() {
 
             <h3
               style={{
-                fontFamily: "var(--font-syne), sans-serif",
+                fontFamily: "var(--font-space-grotesk), sans-serif",
                 fontWeight: 700,
                 fontSize: "1.5rem",
                 color: "#fff",
@@ -184,7 +184,7 @@ export default function Pricing() {
 
             <p
               style={{
-                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontFamily: "var(--font-inter), sans-serif",
                 color: "rgba(255,255,255,0.65)",
                 fontSize: "0.95rem",
                 lineHeight: 1.65,
@@ -198,7 +198,7 @@ export default function Pricing() {
             <div style={{ marginBottom: "8px" }}>
               <span
                 style={{
-                  fontFamily: "var(--font-syne), sans-serif",
+                  fontFamily: "var(--font-space-grotesk), sans-serif",
                   fontWeight: 800,
                   fontSize: "2.75rem",
                   color: "#fff",
@@ -209,7 +209,7 @@ export default function Pricing() {
               </span>
               <span
                 style={{
-                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontFamily: "var(--font-inter), sans-serif",
                   color: "rgba(255,255,255,0.55)",
                   fontSize: "0.9rem",
                   marginLeft: "8px",
@@ -220,7 +220,7 @@ export default function Pricing() {
             </div>
             <p
               style={{
-                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontFamily: "var(--font-inter), sans-serif",
                 color: "rgba(255,255,255,0.45)",
                 fontSize: "0.82rem",
                 margin: "0 0 28px",
@@ -238,7 +238,7 @@ export default function Pricing() {
                     alignItems: "flex-start",
                     gap: "10px",
                     marginBottom: "12px",
-                    fontFamily: "var(--font-dm-sans), sans-serif",
+                    fontFamily: "var(--font-inter), sans-serif",
                     color: "rgba(255,255,255,0.8)",
                     fontSize: "0.9rem",
                     lineHeight: 1.5,
@@ -259,7 +259,7 @@ export default function Pricing() {
                 border: "none",
                 borderRadius: "100px",
                 padding: "14px 24px",
-                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontFamily: "var(--font-inter), sans-serif",
                 fontWeight: 500,
                 fontSize: "0.95rem",
                 cursor: "pointer",
@@ -291,7 +291,7 @@ export default function Pricing() {
                 color: "#E85D26",
                 borderRadius: "100px",
                 padding: "5px 14px",
-                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontFamily: "var(--font-inter), sans-serif",
                 fontWeight: 500,
                 fontSize: "0.8rem",
                 marginBottom: "20px",
@@ -302,7 +302,7 @@ export default function Pricing() {
 
             <h3
               style={{
-                fontFamily: "var(--font-syne), sans-serif",
+                fontFamily: "var(--font-space-grotesk), sans-serif",
                 fontWeight: 700,
                 fontSize: "1.5rem",
                 color: "#0D0D0D",
@@ -314,7 +314,7 @@ export default function Pricing() {
 
             <p
               style={{
-                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontFamily: "var(--font-inter), sans-serif",
                 color: "#666",
                 fontSize: "0.95rem",
                 lineHeight: 1.65,
@@ -328,7 +328,7 @@ export default function Pricing() {
             <div style={{ marginBottom: "8px" }}>
               <span
                 style={{
-                  fontFamily: "var(--font-syne), sans-serif",
+                  fontFamily: "var(--font-space-grotesk), sans-serif",
                   fontWeight: 800,
                   fontSize: "2.75rem",
                   color: "#0D0D0D",
@@ -339,7 +339,7 @@ export default function Pricing() {
               </span>
               <span
                 style={{
-                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontFamily: "var(--font-inter), sans-serif",
                   color: "#888",
                   fontSize: "0.9rem",
                   marginLeft: "8px",
@@ -350,7 +350,7 @@ export default function Pricing() {
             </div>
             <p
               style={{
-                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontFamily: "var(--font-inter), sans-serif",
                 color: "#aaa",
                 fontSize: "0.82rem",
                 margin: "0 0 28px",
@@ -368,7 +368,7 @@ export default function Pricing() {
                     alignItems: "flex-start",
                     gap: "10px",
                     marginBottom: "12px",
-                    fontFamily: "var(--font-dm-sans), sans-serif",
+                    fontFamily: "var(--font-inter), sans-serif",
                     color: "#444",
                     fontSize: "0.9rem",
                     lineHeight: 1.5,
@@ -389,7 +389,7 @@ export default function Pricing() {
                 border: "none",
                 borderRadius: "100px",
                 padding: "14px 24px",
-                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontFamily: "var(--font-inter), sans-serif",
                 fontWeight: 500,
                 fontSize: "0.95rem",
                 cursor: "pointer",
@@ -416,7 +416,7 @@ export default function Pricing() {
         >
           <h3
             style={{
-              fontFamily: "var(--font-syne), sans-serif",
+              fontFamily: "var(--font-space-grotesk), sans-serif",
               fontWeight: 700,
               fontSize: "1rem",
               color: "#888",
@@ -438,7 +438,7 @@ export default function Pricing() {
                   alignItems: "center",
                   padding: "12px 0",
                   borderBottom: "1px solid rgba(0,0,0,0.06)",
-                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontFamily: "var(--font-inter), sans-serif",
                 }}
               >
                 <span
@@ -452,7 +452,7 @@ export default function Pricing() {
                 </span>
                 <span
                   style={{
-                    fontFamily: c.highlight ? "var(--font-syne), sans-serif" : "var(--font-dm-sans), sans-serif",
+                    fontFamily: c.highlight ? "var(--font-space-grotesk), sans-serif" : "var(--font-inter), sans-serif",
                     fontWeight: c.highlight ? 700 : 400,
                     color: c.highlight ? "#E85D26" : "#888",
                     fontSize: c.highlight ? "1rem" : "0.9rem",
@@ -486,7 +486,7 @@ export default function Pricing() {
               <div style={{ fontSize: "1.75rem", marginBottom: "10px" }}>{b.icon}</div>
               <div
                 style={{
-                  fontFamily: "var(--font-syne), sans-serif",
+                  fontFamily: "var(--font-space-grotesk), sans-serif",
                   fontWeight: 700,
                   fontSize: "1rem",
                   color: "#0D0D0D",
@@ -497,7 +497,7 @@ export default function Pricing() {
               </div>
               <div
                 style={{
-                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontFamily: "var(--font-inter), sans-serif",
                   color: "#888",
                   fontSize: "0.875rem",
                   lineHeight: 1.5,
