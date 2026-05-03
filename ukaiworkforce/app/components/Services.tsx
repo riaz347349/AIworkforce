@@ -24,25 +24,33 @@ export default function Services() {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const cards = sectionRef.current?.querySelectorAll<HTMLElement>(".service-card");
-            cards?.forEach((card, i) => {
-              setTimeout(() => {
-                card.style.opacity = "1";
-                card.style.transform = "translateY(0)";
-              }, i * 120);
-            });
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.2 }
+    const cards = Array.from(
+      sectionRef.current?.querySelectorAll<HTMLElement>(".service-card") ?? []
     );
+    if (!cards.length) return;
+
+    const reveal = () =>
+      cards.forEach((card, i) =>
+        setTimeout(() => {
+          card.style.opacity = "1";
+          card.style.transform = "translateY(0)";
+        }, i * 120)
+      );
+
+    cards.forEach((card) => {
+      card.style.opacity = "0";
+      card.style.transform = "translateY(20px)";
+      card.style.transition = "opacity 0.5s ease, transform 0.5s ease, border-color 0.2s, box-shadow 0.2s";
+    });
+
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { reveal(); observer.disconnect(); } },
+      { threshold: 0, rootMargin: "0px 0px -60px 0px" }
+    );
+
     if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
+    const fallback = setTimeout(reveal, 1400);
+    return () => { observer.disconnect(); clearTimeout(fallback); };
   }, []);
 
   return (
@@ -52,43 +60,17 @@ export default function Services() {
       style={{ background: "#ffffff", padding: "96px 24px" }}
     >
       <div style={{ maxWidth: "1100px", margin: "0 auto", textAlign: "center" }}>
-        <span
-          style={{
-            display: "inline-block",
-            background: "rgba(232,93,38,0.1)",
-            color: "#E85D26",
-            borderRadius: "100px",
-            padding: "6px 16px",
-            fontFamily: "var(--font-dm-sans), sans-serif",
-            fontWeight: 500,
-            fontSize: "0.8rem",
-            letterSpacing: "0.08em",
-            textTransform: "uppercase",
-            marginBottom: "20px",
-          }}
-        >
-          What we do
-        </span>
+        <span style={tagStyle}>What we do</span>
 
-        <h2
-          style={{
-            fontFamily: "var(--font-syne), sans-serif",
-            fontWeight: 800,
-            fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
-            color: "#0D0D0D",
-            margin: "0 0 56px",
-            letterSpacing: "-0.5px",
-          }}
-        >
-          Three ways we put AI to work
-        </h2>
+        <h2 style={h2Style}>Three ways we put AI to work</h2>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gridTemplateColumns: "repeat(3, 1fr)",
             gap: "24px",
           }}
+          className="services-grid"
         >
           {services.map((svc) => (
             <div
@@ -97,13 +79,9 @@ export default function Services() {
               style={{
                 background: "#f5f5f3",
                 borderRadius: "20px",
-                padding: "36px 32px",
+                padding: "40px 32px",
                 textAlign: "left",
                 border: "1.5px solid transparent",
-                opacity: 0,
-                transform: "translateY(24px)",
-                transition:
-                  "opacity 0.5s ease, transform 0.5s ease, border-color 0.2s, box-shadow 0.2s",
                 cursor: "default",
               }}
               onMouseEnter={(e) => {
@@ -115,12 +93,26 @@ export default function Services() {
                 e.currentTarget.style.boxShadow = "none";
               }}
             >
-              <div style={{ fontSize: "2.25rem", marginBottom: "20px" }}>{svc.icon}</div>
+              <div
+                style={{
+                  width: "52px",
+                  height: "52px",
+                  background: "rgba(232,93,38,0.1)",
+                  borderRadius: "14px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "1.6rem",
+                  marginBottom: "22px",
+                }}
+              >
+                {svc.icon}
+              </div>
               <h3
                 style={{
                   fontFamily: "var(--font-syne), sans-serif",
                   fontWeight: 700,
-                  fontSize: "1.25rem",
+                  fontSize: "1.2rem",
                   color: "#0D0D0D",
                   margin: "0 0 12px",
                 }}
@@ -130,9 +122,9 @@ export default function Services() {
               <p
                 style={{
                   fontFamily: "var(--font-dm-sans), sans-serif",
-                  color: "#555",
+                  color: "#666",
                   fontSize: "0.95rem",
-                  lineHeight: 1.65,
+                  lineHeight: 1.7,
                   margin: 0,
                 }}
               >
@@ -142,6 +134,35 @@ export default function Services() {
           ))}
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 720px) {
+          .services-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </section>
   );
 }
+
+const tagStyle: React.CSSProperties = {
+  display: "inline-block",
+  background: "rgba(232,93,38,0.1)",
+  color: "#E85D26",
+  borderRadius: "100px",
+  padding: "6px 16px",
+  fontFamily: "var(--font-dm-sans), sans-serif",
+  fontWeight: 500,
+  fontSize: "0.8rem",
+  letterSpacing: "0.08em",
+  textTransform: "uppercase",
+  marginBottom: "20px",
+};
+
+const h2Style: React.CSSProperties = {
+  fontFamily: "var(--font-syne), sans-serif",
+  fontWeight: 800,
+  fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
+  color: "#0D0D0D",
+  margin: "0 0 48px",
+  letterSpacing: "-0.5px",
+};

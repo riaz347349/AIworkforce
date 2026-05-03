@@ -49,25 +49,33 @@ export default function Pricing() {
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const cards = sectionRef.current?.querySelectorAll<HTMLElement>(".price-card");
-            cards?.forEach((card, i) => {
-              setTimeout(() => {
-                card.style.opacity = "1";
-                card.style.transform = "translateY(0)";
-              }, i * 150);
-            });
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.15 }
+    const cards = Array.from(
+      sectionRef.current?.querySelectorAll<HTMLElement>(".price-card") ?? []
     );
+    if (!cards.length) return;
+
+    const reveal = () =>
+      cards.forEach((card, i) =>
+        setTimeout(() => {
+          card.style.opacity = "1";
+          card.style.transform = "translateY(0)";
+        }, i * 150)
+      );
+
+    cards.forEach((card) => {
+      card.style.opacity = "0";
+      card.style.transform = "translateY(20px)";
+      card.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+    });
+
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { reveal(); observer.disconnect(); } },
+      { threshold: 0, rootMargin: "0px 0px -60px 0px" }
+    );
+
     if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
+    const fallback = setTimeout(reveal, 1400);
+    return () => { observer.disconnect(); clearTimeout(fallback); };
   }, []);
 
   return (
@@ -144,9 +152,6 @@ export default function Pricing() {
               borderRadius: "24px",
               padding: "40px 36px",
               textAlign: "left",
-              opacity: 0,
-              transform: "translateY(24px)",
-              transition: "opacity 0.5s ease, transform 0.5s ease",
             }}
           >
             <span
@@ -277,9 +282,6 @@ export default function Pricing() {
               borderRadius: "24px",
               padding: "40px 36px",
               textAlign: "left",
-              opacity: 0,
-              transform: "translateY(24px)",
-              transition: "opacity 0.5s ease, transform 0.5s ease",
             }}
           >
             <span

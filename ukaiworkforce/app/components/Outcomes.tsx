@@ -33,25 +33,33 @@ export default function Outcomes() {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const cards = sectionRef.current?.querySelectorAll<HTMLElement>(".outcome-card");
-            cards?.forEach((card, i) => {
-              setTimeout(() => {
-                card.style.opacity = "1";
-                card.style.transform = "translateY(0)";
-              }, i * 120);
-            });
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.2 }
+    const cards = Array.from(
+      sectionRef.current?.querySelectorAll<HTMLElement>(".outcome-card") ?? []
     );
+    if (!cards.length) return;
+
+    const reveal = () =>
+      cards.forEach((card, i) =>
+        setTimeout(() => {
+          card.style.opacity = "1";
+          card.style.transform = "translateY(0)";
+        }, i * 120)
+      );
+
+    cards.forEach((card) => {
+      card.style.opacity = "0";
+      card.style.transform = "translateY(20px)";
+      card.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+    });
+
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { reveal(); observer.disconnect(); } },
+      { threshold: 0, rootMargin: "0px 0px -60px 0px" }
+    );
+
     if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
+    const fallback = setTimeout(reveal, 1400);
+    return () => { observer.disconnect(); clearTimeout(fallback); };
   }, []);
 
   return (
@@ -94,9 +102,10 @@ export default function Outcomes() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gridTemplateColumns: "repeat(3, 1fr)",
             gap: "20px",
           }}
+          className="outcomes-grid"
         >
           {outcomes.map((o) => (
             <div
@@ -107,19 +116,30 @@ export default function Outcomes() {
                 borderRadius: "20px",
                 padding: "40px 32px",
                 textAlign: "left",
-                opacity: 0,
-                transform: "translateY(24px)",
-                transition: "opacity 0.5s ease, transform 0.5s ease",
               }}
             >
-              <div style={{ fontSize: "2.25rem", marginBottom: "20px" }}>{o.icon}</div>
+              <div
+                style={{
+                  width: "48px",
+                  height: "48px",
+                  background: "rgba(255,255,255,0.1)",
+                  borderRadius: "12px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "1.5rem",
+                  marginBottom: "22px",
+                }}
+              >
+                {o.icon}
+              </div>
               <h3
                 style={{
                   fontFamily: "var(--font-syne), sans-serif",
                   fontWeight: 700,
                   fontSize: "1.3rem",
                   color: o.textColor,
-                  margin: "0 0 12px",
+                  margin: "0 0 10px",
                 }}
               >
                 {o.title}
@@ -139,6 +159,12 @@ export default function Outcomes() {
           ))}
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 720px) {
+          .outcomes-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </section>
   );
 }
