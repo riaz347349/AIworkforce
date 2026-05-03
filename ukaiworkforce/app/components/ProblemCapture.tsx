@@ -38,8 +38,8 @@ export default function ProblemCapture() {
 
     try {
       await emailjs.send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_02wngyu",
+        "template_6cre58o",
         {
           from_name: name,
           from_email: email,
@@ -47,7 +47,7 @@ export default function ProblemCapture() {
           problem: problem,
           to_email: "riaz347349@gmail.com",
         },
-        "YOUR_PUBLIC_KEY"
+        "SQZdK2VCkWXj5KEW-"
       );
     } catch {
       // Log silently; still show success to avoid blocking the user
